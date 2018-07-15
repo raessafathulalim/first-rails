@@ -12,6 +12,10 @@ The armor:
 
 * Database SQLite
 
-* Operating System MacOS High Sierra 10.13.5
+* Bootsrap 4
+
+* http_basic_authenticate_with
+
+* Operating System MacOS High Sierra 10.13.5 
 
 * ---- WILL BE UPDATED -----
