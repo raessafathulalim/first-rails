@@ -1,0 +1,15 @@
+<h3>Comments</h3>
+<% @post.comments.each do |comment| %>
+	<div class="card card-body bg-light" style="margin-bottom: 10px">
+		<blockquote class="blockquote">
+		  <p class="mb-0"><%= comment.body %> 
+		  	<%= link_to("[x]", [comment.post, comment],
+				method: :delete,
+				data: { confirm: 'Are you sure?'},
+				# :class => 'btn btn- btn-danger'
+			) %>
+		  </p>
+		  <footer class="blockquote-footer"><%= comment.username %> in <cite title="Source Title"><%= comment.created_at %></cite></footer>
+		</blockquote>
+	</div>
+<% end %>

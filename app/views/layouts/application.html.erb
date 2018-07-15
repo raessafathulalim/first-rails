@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Firstapp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css' %>
+    <%= javascript_include_tag 'https://code.jquery.com/jquery-3.3.1.min.js' %>
+    <%= javascript_include_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <%= link_to "Ruby Blogs", home_path, html_options = { 
+              :class => 'navbar-brand'
+            } %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <%= link_to "Home", home_path, html_options = { 
+              :class => 'nav-link'
+            } %>
+          </li>
+          
+        </ul>
+        
+        <ul class="navbar-nav float-right">
+          <li class="nav-item">
+            <%= link_to "Create Post ", new_post_path, html_options = { 
+              :class => 'btn btn-outline-success my-2 my-sm-0'
+            } %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main role="main">
+      <div class="jumbotron">
+        <div class="container">
+          <h3 class="display-5">Ruby on Blogs!</h1>
+        </div>
+      </div>
+      <div class="container">
+          <%= yield %>
+          <hr>
+      </div>
+    </main>
+    <footer class="container">
+      <p>&copy; Company 2017-2018</p>
+    </footer>
+  </body>
+</html>
